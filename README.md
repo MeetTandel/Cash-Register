@@ -2,7 +2,7 @@
 
 Cash Register is an app that will tell you the change to be returned as well as the number of notes to be returned. It is made with vanilla JS.
 
-#### Live Project [https://87t47.csb.app/](https://87t47.csb.app/)
+#### Live Project [https://cash-register-app-meet.netlify.app/](https://cash-register-app-meet.netlify.app/)
 
 ## How to Use
 
