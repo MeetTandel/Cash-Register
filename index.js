@@ -14,18 +14,20 @@ billAmount.addEventListener("input", () => {
   hideCashGiven.style.display = "none";
   displayTable.style.display = "none";
   cashGiven.value = "";
+  showMessage("")
 });
 
 nextButton.addEventListener("click", function () {
   if (billAmount.value === "") {
     showMessage("Enter Bill Amount");
+  }else if (Number(billAmount.value) < 0) {
+    showMessage("The bill amount should be greater than 0");
   } else {
     hideCashGiven.style.display = "flex";
   }
 });
 
-checkButton.addEventListener(
-  "click",
+checkButton.addEventListener("click",
   function validateBillsAmountAndCashAmount() {
     hideMessage();
     let amount = Number(billAmount.value);
@@ -39,11 +41,13 @@ checkButton.addEventListener(
         displayTable.style.display = "block";
       } else if (amount === cash) {
         showMessage("No change to return");
+        displayTable.style.display = "none";
       } else {
         showMessage("Do you wanna wash plates?");
+        displayTable.style.display = "none";
       }
     } else {
-      showMessage("the bill amount should be greater than 0");
+      showMessage("The bill amount should be greater than 0");
     }
   }
 );
